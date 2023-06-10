@@ -45,14 +45,14 @@ class GamePlay extends Component {
         case 'PAPER':
           return 'YOU LOSE'
         case 'SCISSORS':
-          return 'YOU WIN'
+          return 'YOU WON'
         default:
           return 'IT IS DRAW'
       }
     } else if (you.id === 'PAPER') {
       switch (opponent.id) {
         case 'ROCK':
-          return 'YOU WIN'
+          return 'YOU WON'
         case 'SCISSORS':
           return 'YOU LOSE'
         default:
@@ -63,7 +63,7 @@ class GamePlay extends Component {
         case 'ROCK':
           return 'YOU LOSE'
         case 'PAPER':
-          return 'YOU WIN'
+          return 'YOU WON'
         default:
           return 'IT IS DRAW'
       }
@@ -78,7 +78,7 @@ class GamePlay extends Component {
     const you = choicesList.filter(eachItem => eachItem.id === id)
     const result = this.updatedResult(you[0], opponent)
     let newScore = score
-    if (result === 'YOU WIN') {
+    if (result === 'YOU WON') {
       newScore = score + 1
     } else if (result === 'YOU LOSE') {
       newScore = score - 1
